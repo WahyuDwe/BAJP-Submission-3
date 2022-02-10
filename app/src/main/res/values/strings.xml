@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Movie Catalog</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="movie">MOVIE</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="favorite">favorite</string>
+    <string name="this_is_a_poster_image">this is a poster image</string>
+    <string name="add_to_favorite">add to favorite</string>
+</resources>
