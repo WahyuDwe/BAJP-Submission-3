@@ -1,7 +1,6 @@
 package com.example.bajp_submission3.ui.detail
 
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +28,6 @@ class DetailMovieActivity : AppCompatActivity(), View.OnClickListener {
     private var scrollRange = -1
     private var contentCategory: String? = null
 
-    private var menu: Menu? = null
     private lateinit var viewModel: DetailMovieViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +40,7 @@ class DetailMovieActivity : AppCompatActivity(), View.OnClickListener {
 
         val factory = ViewModelFactory.getInstance(this)
         viewModel = ViewModelProvider(this, factory)[DetailMovieViewModel::class.java]
-        activityDetailMovieBinding.fabFavorite.setOnClickListener(this)
+       activityDetailMovieBinding.fabFavorite.setOnClickListener(this)
 
 
         val extras = intent.extras
@@ -177,7 +175,6 @@ class DetailMovieActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
     }
-
 
 
     private fun stateSetup() {

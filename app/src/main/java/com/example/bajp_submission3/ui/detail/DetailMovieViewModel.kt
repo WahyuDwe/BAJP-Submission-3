@@ -42,10 +42,10 @@ class DetailMovieViewModel(private val movieDataRepository: MovieDataRepository)
         }
     }
 
-    fun getDetailMovie(): LiveData<Resource<MovieEntity>> = movieDataRepository.getDetailMovies(id)
+    fun getDetailMovie() = movieDataRepository.getDetailMovies(id).also { detailMovie = it }
 
 
-    fun getDetailTvShow(): LiveData<Resource<TvShowEntity>> = movieDataRepository.getDetailTvShow(id)
+    fun getDetailTvShow() = movieDataRepository.getDetailTvShow(id).also { detailTvShow = it }
 
     companion object {
         const val MOVIE = "movie"
