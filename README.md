@@ -17,8 +17,8 @@ Submission Belajar Android Jetpack Pro(BAJP) 3 Dicoding
 
 # Screenshots
 <p>
-  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/splash.png" width="220">
-  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/home.png" width="220">
-  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/detail.png" width="220">
-  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/favorite.png" width="220">
+  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/splash.png" width="250">
+  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/home.png" width="250">
+  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/detail.png" width="250">
+  <img src="https://github.com/WahyuDwe/BAJP-Submission-3/blob/main/art/favorite.png" width="250">
 </p>
