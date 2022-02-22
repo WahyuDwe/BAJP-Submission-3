@@ -27,7 +27,6 @@ class TvShowAdapter :
 
     override fun onBindViewHolder(holder: TvShowViewHolder, position: Int) {
         val tvShow = getItem(position)
-
         if (tvShow != null) {
             holder.bind(tvShow)
         }
