@@ -12,8 +12,8 @@ import com.example.bajp_submission3.BuildConfig
 import com.example.bajp_submission3.R
 import com.example.bajp_submission3.data.source.local.entity.MovieEntity
 import com.example.bajp_submission3.databinding.ItemContentBinding
-import com.example.bajp_submission3.ui.detail.DetailMovieActivity
-import com.example.bajp_submission3.ui.detail.DetailMovieViewModel.Companion.MOVIE
+import com.example.bajp_submission3.ui.detail.DetailActivity
+import com.example.bajp_submission3.ui.detail.DetailViewModel.Companion.MOVIE
 
 class MovieAdapter : PagedListAdapter<MovieEntity, MovieAdapter.MovieViewHolder>(DIFF_CALLBACK) {
 
@@ -48,9 +48,9 @@ class MovieAdapter : PagedListAdapter<MovieEntity, MovieAdapter.MovieViewHolder>
                     .into(ivItemPoster)
 
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailMovieActivity::class.java)
-                    intent.putExtra(DetailMovieActivity.EXTRA_MOVIE, movie.id.toString())
-                    intent.putExtra(DetailMovieActivity.EXTRA_CATEGORY, MOVIE)
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_MOVIE, movie.id.toString())
+                    intent.putExtra(DetailActivity.EXTRA_CATEGORY, MOVIE)
 
                     itemView.context.startActivity(intent)
                 }

@@ -12,8 +12,8 @@ import com.example.bajp_submission3.BuildConfig
 import com.example.bajp_submission3.R
 import com.example.bajp_submission3.data.source.local.entity.TvShowEntity
 import com.example.bajp_submission3.databinding.ItemContentBinding
-import com.example.bajp_submission3.ui.detail.DetailMovieActivity
-import com.example.bajp_submission3.ui.detail.DetailMovieViewModel.Companion.TV_SHOW
+import com.example.bajp_submission3.ui.detail.DetailActivity
+import com.example.bajp_submission3.ui.detail.DetailViewModel.Companion.TV_SHOW
 
 
 class TvShowAdapter :
@@ -51,9 +51,9 @@ class TvShowAdapter :
                     .into(ivItemPoster)
 
                 itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailMovieActivity::class.java)
-                    intent.putExtra(DetailMovieActivity.EXTRA_MOVIE, tvShow.id.toString())
-                    intent.putExtra(DetailMovieActivity.EXTRA_CATEGORY, TV_SHOW)
+                    val intent = Intent(itemView.context, DetailActivity::class.java)
+                    intent.putExtra(DetailActivity.EXTRA_MOVIE, tvShow.id.toString())
+                    intent.putExtra(DetailActivity.EXTRA_CATEGORY, TV_SHOW)
 
                     itemView.context.startActivity(intent)
                 }

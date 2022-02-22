@@ -18,7 +18,7 @@
             android:name=".ui.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.detail.DetailMovieActivity"
+            android:name=".ui.detail.DetailActivity"
             android:exported="false"
             android:theme="@style/Theme.BAJPSubmission3" />
         <activity

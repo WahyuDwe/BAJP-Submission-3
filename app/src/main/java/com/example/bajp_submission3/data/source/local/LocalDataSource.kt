@@ -44,6 +44,8 @@ class LocalDataSource private constructor(private val mMovieDao: MovieDao) {
         private var INSTANCE: LocalDataSource? = null
 
         fun getInstance(movieDao: MovieDao): LocalDataSource =
-            INSTANCE ?: LocalDataSource(movieDao).apply { INSTANCE = this }
+            INSTANCE ?: synchronized(this) {
+                LocalDataSource(movieDao).apply { INSTANCE = this }
+            }
     }
 }

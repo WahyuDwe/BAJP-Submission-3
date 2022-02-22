@@ -75,7 +75,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
-    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
 }

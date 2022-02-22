@@ -38,10 +38,10 @@ class MovieFavoriteFragment : Fragment() {
                 }
             }
 
-            with(binding?.rvMovieFavorite) {
-                this?.layoutManager = LinearLayoutManager(context)
-                this?.setHasFixedSize(true)
-                this?.adapter = adapter
+            binding?.rvMovieFavorite?.apply {
+                setHasFixedSize(true)
+                this.adapter = adapter
+                layoutManager = LinearLayoutManager(context)
             }
         }
     }

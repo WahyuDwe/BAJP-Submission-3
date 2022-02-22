@@ -26,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
 
     private fun setViewPager() {
         val listFragment = listOf(MovieFragment(), TvShowFragment())
-        val titleTab = listOf("Movie", "Tv Show")
+        val titleTab = listOf(getString(R.string.movie_tablayout), getString(R.string.tvshow_tablayout))
 
         binding.viewPager.adapter =
             ViewPagerAdapter(listFragment, this.supportFragmentManager, lifecycle)

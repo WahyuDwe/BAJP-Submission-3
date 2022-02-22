@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.bajp_submission3.data.MovieDataRepository
 import com.example.bajp_submission3.di.Injection
-import com.example.bajp_submission3.ui.detail.DetailMovieViewModel
+import com.example.bajp_submission3.ui.detail.DetailViewModel
 import com.example.bajp_submission3.ui.favorite.movie.MovieFavoriteViewModel
 import com.example.bajp_submission3.ui.favorite.tvshow.TvShowFavoriteViewModel
 import com.example.bajp_submission3.ui.movie.MovieViewModel
@@ -26,8 +26,8 @@ class ViewModelFactory private constructor(private val movieDataRepository: Movi
                 TvShowViewModel(movieDataRepository) as T
             }
 
-            modelClass.isAssignableFrom(DetailMovieViewModel::class.java) -> {
-                DetailMovieViewModel(movieDataRepository) as T
+            modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
+                DetailViewModel(movieDataRepository) as T
             }
 
             modelClass.isAssignableFrom(MovieFavoriteViewModel::class.java) -> {

@@ -53,10 +53,10 @@ class MovieFragment : Fragment() {
                 }
             }
 
-            with(binding?.rvMovie) {
-                this?.layoutManager = LinearLayoutManager(context)
-                this?.setHasFixedSize(true)
-                this?.adapter = movieAdapter
+            binding?.rvMovie?.apply {
+                setHasFixedSize(true)
+                this.adapter = movieAdapter
+                layoutManager = LinearLayoutManager(context)
             }
         }
     }

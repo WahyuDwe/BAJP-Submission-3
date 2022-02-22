@@ -7,4 +7,6 @@
     <string name="favorite">favorite</string>
     <string name="this_is_a_poster_image">this is a poster image</string>
     <string name="add_to_favorite">add to favorite</string>
+    <string name="movie_tablayout">Movie</string>
+    <string name="tvshow_tablayout">Tv Show</string>
 </resources>

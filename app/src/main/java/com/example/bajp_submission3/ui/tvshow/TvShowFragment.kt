@@ -53,10 +53,10 @@ class TvShowFragment : Fragment() {
                 }
             }
 
-            with(binding?.rvTvshow) {
-                this?.layoutManager = LinearLayoutManager(context)
-                this?.setHasFixedSize(true)
-                this?.adapter = tvShowAdapter
+            binding?.rvTvshow?.apply {
+                setHasFixedSize(true)
+                this.adapter = tvShowAdapter
+                layoutManager = LinearLayoutManager(context)
             }
         }
     }
