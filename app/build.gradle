@@ -6,12 +6,13 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    namespace'com.example.bajp_submission3'
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.bajp_submission2"
         minSdk 21
-        targetSdk 31
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -38,6 +39,7 @@ android {
     }
 
     buildFeatures {
+        buildConfig true
         viewBinding true
     }
     flavorDimensions 'env'
@@ -85,7 +87,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
-    implementation "androidx.paging:paging-runtime:$pagingVersion"
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
 
     // room
     implementation "androidx.room:room-runtime:$roomRuntimeVersion"

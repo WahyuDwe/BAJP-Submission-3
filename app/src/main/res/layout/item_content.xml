@@ -34,7 +34,7 @@
             <ImageView
                 android:id="@+id/iv_item_poster"
                 android:layout_width="120dp"
-                android:layout_height="170dp"
+                android:layout_height="130dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:scaleType="centerCrop"
@@ -51,7 +51,7 @@
                 android:layout_marginEnd="16dp"
                 android:ellipsize="end"
                 android:gravity="start"
-                android:maxLines="2"
+                android:maxLines="1"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

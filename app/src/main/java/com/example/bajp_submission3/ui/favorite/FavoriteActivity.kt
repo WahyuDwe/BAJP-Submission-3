@@ -18,6 +18,10 @@ class FavoriteActivity : AppCompatActivity() {
         title = "Favorite"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         setViewPager()
+
+        binding.toolbar.setNavigationOnClickListener {
+            finish()
+        }
     }
 
     private fun setViewPager() {
@@ -32,8 +36,4 @@ class FavoriteActivity : AppCompatActivity() {
         }.attach()
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
 }

@@ -12,11 +12,11 @@ import com.example.bajp_submission3.ui.movie.MovieViewModel
 import com.example.bajp_submission3.ui.tvshow.TvShowViewModel
 
 
+@Suppress("UNCHECKED_CAST")
 class ViewModelFactory private constructor(private val movieDataRepository: MovieDataRepository) :
     ViewModelProvider.NewInstanceFactory() {
 
-    @Suppress("UNCHECKED_CAST")
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return when {
             modelClass.isAssignableFrom(MovieViewModel::class.java) -> {
                 MovieViewModel(movieDataRepository) as T

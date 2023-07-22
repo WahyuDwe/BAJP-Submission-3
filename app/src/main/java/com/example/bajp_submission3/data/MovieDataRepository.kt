@@ -34,7 +34,7 @@ class MovieDataRepository private constructor(
             }
 
             override fun shouldFetch(data: PagedList<MovieEntity>?): Boolean =
-                data == null || data.isEmpty()
+                data.isNullOrEmpty()
 
             override fun createCall(): LiveData<ApiResponse<List<MovieResponse>>> =
                 remoteDataSource.getMovies()

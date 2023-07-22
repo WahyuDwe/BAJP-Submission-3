@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import com.example.bajp_submission3.R
 import com.example.bajp_submission3.databinding.ActivityHomeBinding
 import com.example.bajp_submission3.ui.favorite.FavoriteActivity
@@ -22,32 +23,39 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setViewPager()
+        menuBarNavigation()
     }
 
     private fun setViewPager() {
         val listFragment = listOf(MovieFragment(), TvShowFragment())
-        val titleTab = listOf(getString(R.string.movie_tablayout), getString(R.string.tvshow_tablayout))
+        val titleTab = listOf(
+            getString(R.string.movie_tablayout),
+            getString(R.string.tvshow_tablayout)
+        )
+        val iconTab = listOf(
+            AppCompatResources.getDrawable(this, R.drawable.ic_movie),
+            AppCompatResources.getDrawable(this, R.drawable.ic_tvshow)
+        )
 
         binding.viewPager.adapter =
             ViewPagerAdapter(listFragment, this.supportFragmentManager, lifecycle)
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            tab.text = titleTab[position]
+//            tab.text = titleTab[position]
+            tab.icon = iconTab[position]
         }.attach()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.menu_main_favorite, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.main_favorite) {
-            Intent(this, FavoriteActivity::class.java).also {
-                startActivity(it)
+    private fun menuBarNavigation() {
+        binding.toolbar.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+                R.id.main_favorite -> {
+                    startActivity(Intent(this, FavoriteActivity::class.java))
+                    true
+                }
+                else -> false
             }
         }
-        return super.onOptionsItemSelected(item)
     }
+
 }
