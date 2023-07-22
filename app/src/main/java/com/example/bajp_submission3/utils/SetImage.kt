@@ -6,7 +6,7 @@ import com.example.bajp_submission3.BuildConfig
 
 
 object SetImage {
-    fun loadImage(imageView: ImageView, url: String) {
+    fun loadImage(imageView: ImageView, url: String?) {
         Glide.with(imageView)
             .load(BuildConfig.IMAGE_URL + url)
             .into(imageView)

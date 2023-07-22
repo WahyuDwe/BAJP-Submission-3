@@ -13,7 +13,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
     init {
         result.value = Resource.loading(null)
 
-        val dbSource = loadFromDb()
+        val dbSource = this.loadFromDb()
 
         result.addSource(dbSource) { data ->
             result.removeSource(dbSource)

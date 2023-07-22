@@ -28,7 +28,7 @@ data class TvShowEntity(
     var score: Double,
 
     @ColumnInfo(name = "imagepath_tvshow")
-    var imagePath: String,
+    var imagePath: String?,
 
     @ColumnInfo(name = "favorited_tvshow")
     var favorited: Boolean = false

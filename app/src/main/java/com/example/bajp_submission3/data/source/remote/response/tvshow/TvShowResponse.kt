@@ -22,5 +22,5 @@ data class TvShowResponse(
     var score: Double,
 
     @SerializedName("poster_path")
-    var imagePath: String
+    var imagePath: String? = null
 ) : Parcelable

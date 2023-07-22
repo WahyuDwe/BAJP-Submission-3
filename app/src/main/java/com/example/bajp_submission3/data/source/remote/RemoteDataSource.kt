@@ -38,7 +38,7 @@ class RemoteDataSource {
             ) {
                 resultMovies.value =
                     ApiResponse.success(response.body()?.results as List<MovieResponse>)
-                Log.d(TAG, "onResponse : ${response.body()}")
+                Log.d(TAG, "onResponseMovie : ${response.body()}")
                 EspressoIdlingResources.decrement()
             }
 
@@ -61,7 +61,7 @@ class RemoteDataSource {
             ) {
                 resultDetailMovies.value =
                     ApiResponse.success(response.body() as DetailMovieResponse)
-                Log.d(TAG, "onResponse : ${response.body()}")
+                Log.d(TAG, "onResponseTvShow : ${response.body()}")
                 EspressoIdlingResources.decrement()
             }
 

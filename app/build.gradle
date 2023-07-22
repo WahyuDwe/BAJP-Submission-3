@@ -40,14 +40,24 @@ android {
     buildFeatures {
         viewBinding true
     }
+    flavorDimensions 'env'
+    productFlavors {
+        staging {
+            dimension 'env'
+            applicationIdSuffix '.staging'
+        }
+        production {
+            dimension 'env'
+        }
+    }
 }
 
 dependencies {
-    //kotlin
+    // kotlin
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$coreVersion"
 
-    //ui
+    // ui
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
@@ -57,7 +67,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    //testing
+    // testing
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test:runner:$androidTestVersion"
@@ -71,11 +81,13 @@ dependencies {
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
     implementation "androidx.test.espresso:espresso-idling-resource:$idleResourceVersion"
 
-    //network
+    // network
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3Version"
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+
+    // room
     implementation "androidx.room:room-runtime:$roomRuntimeVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
 }

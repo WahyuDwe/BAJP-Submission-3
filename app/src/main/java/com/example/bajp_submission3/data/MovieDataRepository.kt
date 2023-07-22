@@ -19,8 +19,7 @@ class MovieDataRepository private constructor(
     private val remoteDataSource: RemoteDataSource,
     private val localDataSource: LocalDataSource,
     private val appExecutors: AppExecutors
-) :
-    MovieDataSource {
+) : MovieDataSource {
 
     override fun getMovies(): LiveData<Resource<PagedList<MovieEntity>>> {
         return object :
